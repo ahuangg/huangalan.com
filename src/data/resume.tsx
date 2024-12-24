@@ -277,7 +277,7 @@ export const DATA = {
         },
         {
             title: "JP Morgan Code for Good - 2022",
-            dates: "September 17th - 18th, 2024",
+            dates: "September 17th - 18th, 2022",
             location: "Manhattan, New York",
             description:
                 "Developed an onboarding application to facilitate mentor sign-ups and offer incentives for retention.",
