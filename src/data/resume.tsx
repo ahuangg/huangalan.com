@@ -306,7 +306,7 @@ export const DATA = {
         },
         {
             title: "TeenHacks LI - Spring 2019",
-            dates: "May 25th - 26st, 2018",
+            dates: "May 25th - 26st, 2019",
             location: "Long Island, New York",
             description:
                 "Developed an Edtech application designed for focused learning.",
