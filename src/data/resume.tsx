@@ -34,8 +34,8 @@ export const DATA = {
     navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
     contact: {
         social: {
-            GitHub: {
-                name: "GitHub",
+            Github: {
+                name: "Github",
                 url: "https://github.com/ahuangg",
                 icon: Icons.github,
 
@@ -48,9 +48,16 @@ export const DATA = {
 
                 navbar: true,
             },
+            Leetcode: {
+                name: "Leetcode",
+                url: "https://leetcode.com/u/huangalan/",
+                icon: Icons.leetcode,
+
+                navbar: true,
+            },
             Resume: {
                 name: "Resume",
-                url: "https://drive.google.com/file/d/1itiheOjoHhgtbRYBrSJZ8d-UsLReJpmK/view?usp=sharing",
+                url: "https://drive.google.com/file/d/1hpdJQC74zJQWfV7Z7Q1kU6US1jmHgZRm/view?usp=sharing",
                 icon: Icons.download,
 
                 navbar: true,
