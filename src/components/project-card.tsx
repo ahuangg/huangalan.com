@@ -82,9 +82,11 @@ export function ProjectCard({
                             .replace("www.", "")
                             .replace("/", "")}
                     </div>
-                    <Markdown className="prose max-w-full text-pretty text-xs text-muted-foreground dark:prose-invert tracking-tighter">
-                        {description}
-                    </Markdown>
+                    <div className="prose max-w-full text-pretty text-xs text-muted-foreground dark:prose-invert tracking-tighter">
+                        <Markdown>
+                            {description}
+                        </Markdown>
+                    </div>
                 </div>
             </CardHeader>
             <CardContent className="mt-auto flex flex-col px-2">

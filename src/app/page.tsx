@@ -6,8 +6,13 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import type { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+    title: "Home | Alan Huang",
+};
 
 export default function Page() {
     return (
@@ -75,6 +80,8 @@ export default function Page() {
                                     work.end ?? "Present"
                                 }`}
                                 description={work.description}
+                                location={work.location}
+                                initialExpanded={true}
                             />
                         </BlurFade>
                     ))}
@@ -98,6 +105,8 @@ export default function Page() {
                                 title={education.school}
                                 subtitle={education.degree}
                                 period={`${education.start} - ${education.end}`}
+                                location={education.location}
+                                hideChevron={true}
                             />
                         </BlurFade>
                     ))}
@@ -108,7 +117,7 @@ export default function Page() {
                     <BlurFade delay={BLUR_FADE_DELAY * 7}>
                         <h2 className="text-xl font-bold">Skills</h2>
                     </BlurFade>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap gap-1">
                         {DATA.skills.map((skill, id) => (
                             <BlurFade
                                 key={skill}

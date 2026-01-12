@@ -18,6 +18,9 @@ interface ResumeCardProps {
     badges?: readonly string[];
     period: string;
     description?: string;
+    location?: string;
+    initialExpanded?: boolean;
+    hideChevron?: boolean;
 }
 export const ResumeCard = ({
     logoUrl,
@@ -28,8 +31,11 @@ export const ResumeCard = ({
     badges,
     period,
     description,
+    location,
+    initialExpanded = false,
+    hideChevron = false,
 }: ResumeCardProps) => {
-    const [isExpanded, setIsExpanded] = React.useState(false);
+    const [isExpanded, setIsExpanded] = React.useState(initialExpanded);
 
     const handleClick = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -37,20 +43,22 @@ export const ResumeCard = ({
         if (description) {
             e.preventDefault();
             setIsExpanded(!isExpanded);
+        } else if (hideChevron) {
+            e.preventDefault();
         }
     };
 
     return (
         <Link
-            href={href || "#"}
-            className="block cursor-pointer"
+            href={hideChevron ? "#" : (href || "#")}
+            className={cn("block", hideChevron ? "cursor-default" : "cursor-pointer")}
             onClick={handleClick}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={hideChevron ? undefined : "_blank"}
+            rel={hideChevron ? undefined : "noopener noreferrer"}
         >
             <Card className="flex tracking-tighter">
                 <div className="flex-none">
-                    <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+                    <Avatar className="border size-10 m-auto bg-muted-background dark:bg-foreground">
                         <AvatarImage
                             src={logoUrl}
                             alt={altText}
@@ -77,18 +85,25 @@ export const ResumeCard = ({
                                         ))}
                                     </span>
                                 )}
-                                <ChevronRightIcon
-                                    className={cn(
-                                        "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                                        isExpanded ? "rotate-90" : "rotate-0"
-                                    )}
-                                />
+                                {!hideChevron && (
+                                    <ChevronRightIcon
+                                        className={cn(
+                                            "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                                            isExpanded ? "rotate-90" : "rotate-0"
+                                        )}
+                                    />
+                                )}
                             </h3>
                             <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                                 {period}
                             </div>
                         </div>
                         {subtitle && <div className="text-xs">{subtitle}</div>}
+                        {location && (
+                            <div className="text-xs text-muted-foreground mt-1">
+                                {location}
+                            </div>
+                        )}
                     </CardHeader>
                     {description && (
                         <motion.div

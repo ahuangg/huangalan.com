@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { HomeIcon, CameraIcon } from "lucide-react";
 
 export const DATA = {
     name: "Alan Huang",
@@ -8,30 +8,35 @@ export const DATA = {
     location: "New York City, NY",
     locationLink: "https://www.google.com/maps/place/newyorkcity",
     description:
-        "Software Developer with a strong interest in exploring and developing with cutting-edge technologies. Currently diving deep into programming languages and databases.",
+        "Software Engineer with a strong interest in exploring and developing with cutting-edge technologies. Currently diving deep into product development, agentic workflows, and photography. ",
     summary: "",
     avatarUrl: "https://avatars.githubusercontent.com/u/98438095?v=4",
     skills: [
+        "Golang",
         "Python",
-        "Typescript",
-        "Go",
+        "TypeScript",
         "Java",
-        "C#",
+        "SQL",
+        "React",
+        "Svelte",
+        "Node",
+        "Spring",
+        "FastAPI",
         "AWS",
-        "Git",
-        "CI/CD",
         "Docker",
-        "React.js",
-        "Node.js",
-        "Java Spring",
+        "OpenAI",
+        "Claude",
+        "Ollama",
+        "MCP",
+        "PostgreSQL",
         "MongoDB",
-        "Postgres",
-        "Prisma",
-        "Jest",
-        "Mockito",
-        "Unity",
+        "Git",
+        "Linear",
     ],
-    navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+    navbar: [
+        { href: "/", icon: HomeIcon, label: "Home" },
+        { href: "/photo-gallery", icon: CameraIcon, label: "Photos" },
+    ],
     contact: {
         social: {
             Github: {
@@ -74,12 +79,38 @@ export const DATA = {
 
     work: [
         {
+            company: "Startup",
+            href: "#",
+            badges: [],
+            location: "New York City, NY",
+            title: "Founding Software Engineer",
+            logoUrl: "",
+            start: "December 2024",
+            end: "Present",
+            description:
+                "At Startup, I built payroll and bill-pay systems processing 100+ monthly invoices, shipped review-management features securing a partnership, and automated tip pooling and accounting across 50+ restaurant locations.",
+        },
+        {
+            company: "AT&T Labs",
+            href: "https://www.att.com/",
+            badges: [],
+            location: "Middletown, NJ",
+            title: "Machine Learning Engineer Intern",
+            logoUrl:
+                "https://img.logo.dev/att.com?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
+            start: "June 2025",
+            end: "August 2025",
+            description:
+                "At AT&T Labs, I developed an AI agent reducing diagram creation time by 6+ hours per case, integrated with 3 AI agents via MCP, and fine-tuned a 4B LLaMA model outperforming both base and 70B models.",
+        },
+        {
             company: "Amazon",
             href: "https://merch.amazon.com/",
             badges: [],
             location: "Seattle, WA",
             title: "Software Development Engineer Intern",
-            logoUrl: "https://logo.clearbit.com/amazon.com",
+            logoUrl:
+                "https://img.logo.dev/amazon.com?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
             start: "May 2023",
             end: "August 2023",
             description:
@@ -91,11 +122,12 @@ export const DATA = {
             href: "https://www.stonybrook.edu/",
             location: "Stony Brook, NY",
             title: "Undergraduate Researcher",
-            logoUrl: "https://logo.clearbit.com/stonybrook.edu",
+            logoUrl:
+                "https://img.logo.dev/stonybrook.edu?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
             start: "August 2022",
             end: "November 2022",
             description:
-                "As an Undergraduate Researcher at Stony Brook University, I collaborated with the bioinformatics team to develop a genomic visualization platform using JavaScript and Plotly.",
+                "At Stony Brook University, I collaborated with the bioinformatics team to develop a genomic visualization platform using JavaScript and Plotly.",
         },
         {
             company: "Platinum Edge Tutoring",
@@ -103,11 +135,12 @@ export const DATA = {
             badges: [],
             location: "Remote",
             title: "Software Engineer Intern",
-            logoUrl: "https://logo.clearbit.com/platinumedgetutoring.com",
+            logoUrl:
+                "https://img.logo.dev/platinumedgetutoring.com?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
             start: "June 2022",
             end: "August 2022",
             description:
-                "During my internship at Platinum Edge Tutoring, I created a comprehensive EdTech platform using the MERN stack, promoting collaboration among students.",
+                "At Platinum Edge Tutoring, I created a comprehensive EdTech platform using the MERN stack, promoting collaboration among students.",
         },
     ],
     education: [
@@ -115,15 +148,19 @@ export const DATA = {
             school: "Georgia Institute of Technology",
             href: "https://www.gatech.edu/",
             degree: "M.S. Computer Science, Computing Systems",
-            logoUrl: "https://logo.clearbit.com/gatech.edu",
+            logoUrl:
+                "https://img.logo.dev/gatech.edu?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
+            location: "Atlanta, GA",
             start: "2024",
-            end: "2025",
+            end: "2026",
         },
         {
             school: "CodePath",
             href: "https://www.codepath.org/",
             degree: "Advanced Software Engineering, CodePath IOS Development",
-            logoUrl: "https://logo.clearbit.com/codepath.org",
+            logoUrl:
+                "https://img.logo.dev/codepath.org?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
+            location: "Remote",
             start: "2022",
             end: "2024",
         },
@@ -131,7 +168,9 @@ export const DATA = {
             school: "Stony Brook University",
             href: "https://www.stonybrook.edu/",
             degree: "B.S. Computer Science",
-            logoUrl: "https://logo.clearbit.com/stonybrook.edu",
+            logoUrl:
+                "https://img.logo.dev/stonybrook.edu?token=pk_Fd70kg-ISZ2Mw0_gY1s0Ag",
+            location: "Stony Brook, NY",
             start: "2021",
             end: "2023",
         },
